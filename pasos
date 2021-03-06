@@ -1,0 +1,11 @@
+1. levantar el servidor
+    ng serve
+
+2. instalando bootstrap
+    * en el home hay 2 maneras de hacerloo
+    * se instala tambien con npm
+        npm install bootstrap --save
+        npm install jquery --save
+        npm install popper --save
+
+        luego se modifica el angular.json en styles y scrips
