@@ -10,3 +10,9 @@
 
         luego se modifica el angular.json en styles y scrips
         La libreria que mas dependencias tiene normalmente va al final
+
+3. instalando en otra PC
+    * se clona del repositorio
+    * en terminal
+        npm install
+        ng serve
