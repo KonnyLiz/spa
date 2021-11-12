@@ -10,6 +10,9 @@ import { ListaComponent } from './components/lista/lista.component';
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
+//services
+import { HeroesService } from './services/heroes.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,9 @@ import { APP_ROUTING } from './app.routes';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
