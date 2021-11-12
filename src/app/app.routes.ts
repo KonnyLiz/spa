@@ -2,6 +2,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ListaComponent } from "./components/lista/lista.component";
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 // arreglo de rutas con path y componentes
 // los ** es si no encuentra la ruta ejecutara esto
@@ -11,6 +12,9 @@ const APP_ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'lista', component: ListaComponent},
+
+    // recibiendo parametros en la ruta, el parametro se llama id
+    {path: 'heroe/:id', component: HeroeComponent},
     {path: '**', pathMatch: 'full', redirectTo:'home'}
 ];
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService, Heroe } from '../../services/heroes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista',
@@ -14,7 +15,8 @@ export class ListaComponent implements OnInit {
 
   // creamos la instancia del servicio
   constructor(
-    private _heroesService: HeroesService
+    private _heroesService: HeroesService,
+    private router: Router
   ) { }
 
   // se usa cuando la pagina ya esta renderizada
@@ -24,6 +26,12 @@ export class ListaComponent implements OnInit {
 
     this.heroes = this._heroesService.getHeroes();
     console.log(this.heroes);
+  }
+
+  // navegando desde una funcion en las rutas con parametros
+  verMas(idx: number) {
+    console.log(idx);
+    this.router.navigate(['/heroe', idx]);
   }
 
 }
