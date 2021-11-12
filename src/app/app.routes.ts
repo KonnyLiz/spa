@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { ListaComponent } from "./components/lista/lista.component";
 
 // arreglo de rutas con path y componentes
 // los ** es si no encuentra la ruta ejecutara esto
@@ -9,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 const APP_ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent},
+    {path: 'lista', component: ListaComponent},
     {path: '**', pathMatch: 'full', redirectTo:'home'}
 ];
 
