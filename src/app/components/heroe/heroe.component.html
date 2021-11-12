@@ -1,1 +1,24 @@
-<p>heroe works!</p>
+<h1>{{ heroe.nombre }} </h1>
+<small> {{ heroe.aparicion }} </small>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" alt="">
+        <br><br>
+
+        <a [routerLink]="['/lista']" routerLinkActive="router-link-active" class="btn btn-outline-danger">Regresar</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ heroe.nombre }}</h3>
+
+        <p>{{ heroe.bio }}</p>
+
+        <div>
+            <!-- si es dc que se vea la img dc, si es marvel igual -->
+            <img [src]="heroe.casa" alt="" width="100">
+        </div>
+
+    </div>
+
+</div>

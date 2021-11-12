@@ -67,6 +67,10 @@ export class HeroesService {
     getHeroes():Heroe[] {
         return this.data;
     }
+
+    getHeroe(i: number): Heroe {
+        return this.data[i];
+    }
 }
 
 // creando una interface para la data heroes
