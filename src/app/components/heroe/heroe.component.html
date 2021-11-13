@@ -1,12 +1,13 @@
-<h1>{{ heroe.nombre }} </h1>
-<small> {{ heroe.aparicion }} </small>
+<!-- los pipes solo cambian la informacion de forma visual
+    para mandar parametros con pipes ver date:'y' -->
+<h1>{{ heroe.nombre | uppercase }} <small> ({{ heroe.aparicion | date:'y' }}) </small> </h1>
 <hr>
 <div class="row">
     <div class="col-md-4">
-        <img [src]="heroe.img" class="img-fluid" alt="">
+        <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
         <br><br>
 
-        <a [routerLink]="['/lista']" routerLinkActive="router-link-active" class="btn btn-outline-danger">Regresar</a>
+        <a [routerLink]="['/lista']" class="btn btn-outline-danger">Regresar</a>
     </div>
 
     <div class="col-md-8">

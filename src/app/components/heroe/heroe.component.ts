@@ -24,7 +24,6 @@ export class HeroeComponent implements OnInit {
 
       // el dato tiene el nombre del link
       this.heroe = this._heroesService.getHeroe(params['id']);
-      console.log(this.heroe);
 
       // para la casa
       if(this.heroe['casa'] == 'DC'){

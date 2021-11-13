@@ -25,12 +25,10 @@ export class ListaComponent implements OnInit {
     // cuando ya este cargada la pagina iniciaremos el servicio para llamar a los heroes
 
     this.heroes = this._heroesService.getHeroes();
-    console.log(this.heroes);
   }
 
   // navegando desde una funcion en las rutas con parametros
   verMas(idx: number) {
-    console.log(idx);
     this.router.navigate(['/heroe', idx]);
   }
 
