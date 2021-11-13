@@ -27,7 +27,6 @@ export class ListaComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
   }
 
-  // navegando desde una funcion en las rutas con parametros
   verMas(idx: number) {
     this.router.navigate(['/heroe', idx]);
   }

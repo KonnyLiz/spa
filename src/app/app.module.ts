@@ -14,6 +14,7 @@ import { APP_ROUTING } from './app.routes';
 import { HeroesService } from './services/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
+import { HeroesCardComponent } from './components/heroes-card/heroes-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResultadosComponent } from './components/resultados/resultados.componen
     AboutComponent,
     ListaComponent,
     HeroeComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    HeroesCardComponent
   ],
   imports: [
     BrowserModule,

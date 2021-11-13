@@ -77,13 +77,15 @@ export class HeroesService {
         txt = txt.toLowerCase();
 
         // verificamos cada uno de los heroes
-        for (let h of this.data) {
+        for (let i = 0; i < this.data.length; i++) {
+            let h = this.data[i];
             let nombre = h.nombre.toLowerCase();
 
             // indexOf permite buscar coincidencias en string
             // devuelve la posicion en que lo encuentra
             // si encuentra coincidencias devolvera un numero mayor a 0
             if (nombre.indexOf(txt) >= 0) {
+                h.idx = i;
                 arrHeroes.push(h);
             }
         }
@@ -99,4 +101,5 @@ export interface Heroe {
     img: string;
     aparicion: string;
     casa: string;
+    idx?: number;
 }
