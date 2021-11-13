@@ -26,8 +26,10 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <!-- para su funcion, primero le damos un alias al input con #buscar 
+                luego le anadimos un evento para cuando se presione enter realice una funcion-->
+                <input class="form-control me-2" (keyup)="buscarHeroe(txtBuscar.value)" #txtBuscar type="text" placeholder="Buscar heroe" aria-label="Buscar" />
+                <button class="btn btn-outline-primary" type="button" (click)="buscarHeroe(txtBuscar.value)">Buscar</button>
             </form>
         </div>
     </div>

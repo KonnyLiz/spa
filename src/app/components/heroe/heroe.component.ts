@@ -26,7 +26,7 @@ export class HeroeComponent implements OnInit {
       this.heroe = this._heroesService.getHeroe(params['id']);
 
       // para la casa
-      if(this.heroe['casa'] == 'DC'){
+      if(params['casa'] == "DC"){
         this.heroe['casa'] = 'assets/img/dc.png';
       } else {
         this.heroe['casa'] = 'assets/img/marvel.png';

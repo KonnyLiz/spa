@@ -60,14 +60,35 @@ export class HeroesService {
             }
         ];
 
-    constructor() {}
+    constructor() { }
 
-    getHeroes():Heroe[] {
+    getHeroes(): Heroe[] {
         return this.data;
     }
 
     getHeroe(i: number): Heroe {
         return this.data[i];
+    }
+
+    // para buscar heroes
+    buscarHeroes(txt: string): Heroe[] {
+        // nuevo string para guardar los resultados
+        let arrHeroes: Heroe[] = [];
+        txt = txt.toLowerCase();
+
+        // verificamos cada uno de los heroes
+        for (let h of this.data) {
+            let nombre = h.nombre.toLowerCase();
+
+            // indexOf permite buscar coincidencias en string
+            // devuelve la posicion en que lo encuentra
+            // si encuentra coincidencias devolvera un numero mayor a 0
+            if (nombre.indexOf(txt) >= 0) {
+                arrHeroes.push(h);
+            }
+        }
+
+        return arrHeroes;
     }
 }
 
