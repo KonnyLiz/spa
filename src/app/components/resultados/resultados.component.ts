@@ -10,6 +10,7 @@ export class ResultadosComponent implements OnInit {
 
   // variables globales de clase
   heroes: Heroe[] = [];
+  txt: string = '';
 
   // creamos la instancia del servicio
   constructor(
@@ -22,7 +23,13 @@ export class ResultadosComponent implements OnInit {
   // primero se ejecuta el contructor y luego el init
   ngOnInit(): void {
     this.actRoute.params.subscribe(params => {
-      this.heroes = this._heroesService.buscarHeroes(params['txt']);
+      this.txt = params['txt'];
+
+      if(this.txt == ''){
+        this.router.navigate(['/lista']);
+      } else {
+        this.heroes = this._heroesService.buscarHeroes(params['txt']);
+      }
     });
   }
 
